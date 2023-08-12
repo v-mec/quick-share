@@ -1,7 +1,7 @@
 "use client";
 
 import { FileTransfer } from "@/components/FIleTransfer";
-import { usePeer } from "@/utils/peerContext";
+import { usePeer } from "@/contexts/PeerContext";
 import { useParams } from "next/navigation";
 import { DataConnection } from "peerjs";
 import { useEffect, useState } from "react";

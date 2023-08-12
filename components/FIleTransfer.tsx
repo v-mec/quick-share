@@ -1,4 +1,4 @@
-import { Data } from "@/utils/types";
+import { Data } from "@/types";
 import clsx from "clsx";
 import fileDownload from "js-file-download";
 import { DataConnection } from "peerjs";

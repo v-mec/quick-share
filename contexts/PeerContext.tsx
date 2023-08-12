@@ -9,7 +9,11 @@ export const usePeer = () => {
   return useContext(PeerContext);
 };
 
-export const PeerProvider = ({ children }: { children: React.ReactNode }) => {
+export default function PeerProvider({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   const [peer, setPeer] = useState<Peer | null>(null);
 
   useEffect(() => {
@@ -26,4 +30,4 @@ export const PeerProvider = ({ children }: { children: React.ReactNode }) => {
   }, []);
 
   return <PeerContext.Provider value={peer}>{children}</PeerContext.Provider>;
-};
+}

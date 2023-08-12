@@ -2,8 +2,11 @@ import { Header } from "@/components/Header";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { PeerProvider } from "@/utils/peerContext";
+import dynamic from "next/dynamic";
 
+const PeerProvider = dynamic(() => import("@/contexts/PeerContext"), {
+  ssr: false,
+});
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
